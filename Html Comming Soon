@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="content">
+    <h2 data-text="Coming_Soon">Coming_Soon</h2>
+     <div class="timing">00 : 00 : 00</div>
+     <p>Coming this page in loding time</p>
+     <a href="#">Loding Page</a>
+  </div>
+
+
+  <script>
+    let customDate = new Date("December 29, 2024 12:00:00").getTime();
+    let timer = setInterval(timing, 1000);
+  
+    function timing() {
+      let now = new Date().getTime();
+      let x = customDate - now;
+  
+      if (x > 0) {
+        let days = Math.floor(x / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((x % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let mins = Math.floor((x % (1000 * 60 * 60)) / (1000 * 60));
+        let secs = Math.floor((x % (1000 * 60)) / 1000);
+  
+        let time = `${days}d : ${hours}h : ${mins}m : ${secs}s`;
+        document.querySelector('.timing').innerHTML = time;
+      }
+    }
+  </script>
+  
+    </body>
+    </html>
