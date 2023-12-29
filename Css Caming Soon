@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(Images/page\ 1.jpg);
+    min-height: 100vh;
+    background-size: cover;
+}
+.content{
+   width: 100%;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.4); 
+   color: #ffffff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.timing{
+    font-size: 40px;
+}
+.content h2{
+    font-size: 100px;
+    font-style: 900;
+    margin: 10px;
+    font-family: bebas neue;
+}
+.content a{
+    text-decoration: none;
+    background: #fff;
+    color: #111;
+    padding: 10px 35px;
+    border-radius: 50px;
+    margin-top: 15px;
+}
+.content p{
+    margin: 0 auto;
+    width: 35%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.9;
+    overflow: 15px 0;
+}
+
+/*animation*/
+h2{
+   position: relative;
+   font-size: 14vw;
+   color: rgba(0, 0, 0, 0.4);
+   -webkit-text-stroke: 0.1vw rgba(0, 0, 0, 0.4);
+   text-transform: uppercase; 
+}
+h2::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw rgba(0, 0, 0, 0.4);
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate{
+    0%, 10%, 100%{
+        width: 0;
+    }
+    70%, 90%{
+        width: 100%;
+    }
+}
+/*animation Effects*/
+.box{
+    position: relative;
+    width: 200px;
+    height: 100%;
+    background: #fff;
+}
