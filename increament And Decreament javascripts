@@ -1,0 +1,97 @@
+var counterElement = document.getElementById("counter");
+var incrementElement = document.getElementById("increment")
+var decrementElement = document.getElementById("decrement")
+
+var counterValue = 0;
+
+function updatecounter(){
+     counterElement.textContent = counterValue;
+}
+
+incrementElement.addEventListener("click", function(){
+
+      counterValue = counterValue + 1;
+      updatecounter();
+      //counterElement.textContent = counterValue;
+})
+
+function updatecounter(){
+    counterElement.textContent = counterValue;
+}
+
+decrementElement.addEventListener("click", function(){
+if(counterValue>0){
+    counterValue = counterValue - 1;
+    updatecounter();
+    //counterElement.textContent = counterValue;
+}
+})
+
+
+
+//html//
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>increament and decreament</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div class="counter-container">
+        <h1 id="counter">0</h1>
+        <div class="button-container">
+          <button id="increment">Increment</button>
+          <button id="decrement">Decrement</button>
+        </div>
+
+      </div>
+
+
+
+<script src="./script.js"></script>
+</body>
+</html>
+
+
+//css//
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+.counter-container{
+    text-align: center;
+}
+#counter{
+    font-size: 50px;
+}
+.button-container{
+    margin-top: 20px;
+}
+#increment{
+    background: green;
+    padding: 10px 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    color: #fff;
+}
+#decrement{
+    background: red;
+    padding: 10px 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    color: #fff;
+}
